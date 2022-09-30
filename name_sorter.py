@@ -1,10 +1,11 @@
 import sys 
-#reader method to read the csv file to be sorted
+#reader method to read the csv file to be sorted.
 import csv
 
 args = 2
 cli_args = len(sys.argv)
 
+#control structure to validate the file.
 if cli_args < args : 
 	print('Argument Missing: 2nd parameter is required')
 else: 
@@ -12,7 +13,7 @@ else:
 	random_csv = sys.argv[1].lower()
 
 	if random_csv.endswith('.csv') :
-		
+
 		#acquiring the file to read and sort.
 		file = open(random_csv, 'r')
 
@@ -39,4 +40,4 @@ else:
 		#display the sorted data into the new csv file. 
 		csv_writer.writerows(sorted_list)
 	else :
-		print('Incorrect File: csv file required')
+		print('Incorrect File: .csv file required')
